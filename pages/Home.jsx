@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import gsap from 'gsap';
+import { useRef, useEffect } from 'react';
 
 const pages = [
   'Home',
@@ -22,6 +24,10 @@ const A = styled.a`
     border-bottom: 1px solid
       ${({ theme }) => theme.palette.tertiary.light};
   }
+`;
+const P = styled.p`
+  font-family: ${({ theme }) => theme.font.family.p};
+  font-size: ${({ theme }) => theme.font.size.p};
 `;
 
 const pageLink = pages.map((page) => (
@@ -78,16 +84,43 @@ const Footer = styled.div`
   grid-area: Footer;
 `;
 
+export const myAnimation = (comp) => {
+  gsap.to(comp, {
+    duration: 1,
+    ease: 'expo',
+    y: -20,
+    opacity: 1,
+  });
+};
+
 export default function Home() {
+  let ref = useRef(null);
+
+  useEffect(() => {
+    myAnimation(ref.current);
+  }, [ref]);
+
   return (
     <Wrapper>
       <Nav>{pageLink}</Nav>
-      <Hero>Hero</Hero>
-      <Clients>Clients</Clients>
-      <Services>Services</Services>
-      <AboutUs>AboutUs</AboutUs>
-      <ContactUs>ContactUs</ContactUs>
-      <Footer>Footer</Footer>
+      <Hero>
+        <P ref={ref}>Hero</P>
+      </Hero>
+      <Clients>
+        <P>Clients</P>
+      </Clients>
+      <Services>
+        <P>Services</P>
+      </Services>
+      <AboutUs>
+        <P>AboutUs</P>
+      </AboutUs>
+      <ContactUs>
+        <P>ContactUs</P>
+      </ContactUs>
+      <Footer>
+        <P>Footer</P>
+      </Footer>
     </Wrapper>
   );
 }
