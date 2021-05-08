@@ -1,19 +1,59 @@
 import { ThemeProvider } from 'styled-components';
 
-/* HSL */
-const mint_cream = `hsla(111, 24%, 94%, 1)`;
-const smoky_black = `hsla(24, 14%, 7%, 1)`;
-const cordovan = `hsla(358, 38%, 43%, 1)`;
-const blue_ncs = `hsla(201, 44%, 45%, 1)`;
-const tropical_rain_forest = `hsla(168, 51%, 32%, 1)`;
-
 const theme = {
-  colors: {
-    primary_1: mint_cream,
-    primary_2: smoky_black,
-    primary_3: cordovan,
-    secondary: blue_ncs,
-    tertiary: tropical_rain_forest,
+  palette: {
+    primary: {
+      light: `#E28C78`,
+      main: `#D5573B`,
+      dark: `#B94227`,
+    },
+    secondary: {
+      light: `#6CA6C6`,
+      main: `#4082A5`,
+      dark: `#336884`,
+    },
+    tertiary: {
+      light: `#37A993`,
+      main: `#287A6A`,
+      dark: `#194D43`,
+    },
+  },
+  font: {
+    size: {
+      p: `1rem`,
+      h1: `2rem`,
+      h2: `1.5rem`,
+      h3: `1rem`,
+      h4: `.5rem`,
+    },
+    family: {
+      h: `'Montserrat', sans-serif`,
+      p: `'Roboto', sans-serif`,
+    },
+  },
+  padding: {
+    sm: `.5rem`,
+    md: `1rem`,
+    lg: `1.5rem`,
+    xl: `2rem`,
+  },
+  gap: {
+    sm: `.5rem`,
+    md: `1rem`,
+    lg: `1.5rem`,
+    xl: `2rem`,
+  },
+  margin: {
+    sm: `.5rem`,
+    md: `1rem`,
+    lg: `1.5rem`,
+    xl: `2rem`,
+  },
+  media: {
+    sm: `768px`,
+    md: `1024px`,
+    lg: `1200px`,
+    xl: `1600px`,
   },
 };
 
