@@ -31,7 +31,7 @@ const P = styled.p`
 `;
 
 const pageLink = pages.map((page) => (
-  <Link href={`/${page}`}>
+  <Link key={page} href={`/${page}`}>
     <A>{page}</A>
   </Link>
 ));
