@@ -23,7 +23,7 @@ export const A = styled.a`
 `;
 
 export const Nav = styled.div`
-  grid-area: NavHero;
+  grid-area: Nav;
   margin-top: 5px;
   display: grid;
   grid-auto-flow: column;
