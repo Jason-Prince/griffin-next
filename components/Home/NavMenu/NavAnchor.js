@@ -1,14 +1,6 @@
 import styled from 'styled-components';
 
-export const pages = [
-  'Services',
-  'Portfolio',
-  'News',
-  'About Us',
-  'Contact',
-];
-
-export const A = styled.a`
+const NavAnchor = styled.a`
   text-decoration: none;
   text-align: center;
   padding: ${({ theme }) => theme.padding.sm};
@@ -22,14 +14,4 @@ export const A = styled.a`
   }
 `;
 
-export const Nav = styled.div`
-  grid-area: Nav;
-  margin-top: 5px;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: max-content;
-  gap: ${({ theme }) => theme.gap.base};
-  justify-content: center;
-  z-index: 2;
-  height: 25px;
-`;
+export default NavAnchor;

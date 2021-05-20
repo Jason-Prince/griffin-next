@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
 export const Clients = styled.section`
-  grid-area: Clients;
+  grid-area: row2;
 `;
